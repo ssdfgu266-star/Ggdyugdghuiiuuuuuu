@@ -25,7 +25,7 @@ _paused: set = set()
 def _get_chat(user_id: int):
     if user_id not in _user_chats:
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
+            model_name=" gemini-3.5-flash",
             system_instruction=SYSTEM_PROMPT,
         )
         _user_chats[user_id] = model.start_chat(history=[])
